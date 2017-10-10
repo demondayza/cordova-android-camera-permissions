@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<plugin id="cordova-plugin-android-camera-permissions" version="1.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0">
-    <name>Camera Permissions</name>
-    <author>Chris Durfee</author>
-    <description>Cordova plugin to add the android camera permissions.</description>
-    <keywords>cordova camera permissions</keywords>
+<plugin id="cordova-plugin-android-custom-permissions" version="1.0.4" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>Custom Permissions</name>
+    <author>Northroom Tech</author>
+    <description>Cordova plugin to add the custom permissions.</description>
+    <keywords>cordova custom permissions</keywords>
     <license>MIT</license>
     <engines>
         <engine name="cordova" version=">=3.0.0"/>
@@ -11,8 +11,13 @@
     <platform name="android">
       <config-file target="AndroidManifest.xml" parent="/manifest">
         <uses-permission android:name="android.permission.CAMERA" />
-        <uses-permission android:name="android.permission.RECORD_AUDIO" />
-        <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+        <uses-permission android:name="android.permission.STORAGE" />
+        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+         <uses-permission android:name="android.permission.INTERNET" />
+         <uses-permission android:name="android.permission.WAKE_LOCK" />
+         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+         <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+          <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
         <uses-feature android:name="android.hardware.camera" android:required="true" />
       </config-file>
     </platform>
